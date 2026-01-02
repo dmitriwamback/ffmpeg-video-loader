@@ -466,7 +466,6 @@ void VideoPlayer::videoLoop(const char* path, bool loop) {
                         }
                     }
                     
-                    // Complete decoder drain
                     AVPacket* drain_pkt = av_packet_alloc();
                     av_init_packet(drain_pkt);
                     drain_pkt->data = nullptr;
@@ -514,8 +513,7 @@ void VideoPlayer::videoLoop(const char* path, bool loop) {
             ? frame->best_effort_timestamp * av_q2d(formatCtx->streams[videoStream]->time_base)
             : frame->pts * av_q2d(formatCtx->streams[videoStream]->time_base);
 
-        // Your sync logic (fixed while(true) → for(;;))
-        for (;;) {
+        while (true) {
             if (!isRunning.load()) break;
 
             double aclock = audioClock.load();
