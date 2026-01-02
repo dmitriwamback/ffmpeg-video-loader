@@ -22,5 +22,4 @@ void main() {
     vec3 diffuse = diff * vec3(1.0);
 
     fragc = vec4(texture(tex, fs_in.uv).rgb * (ambient + diffuse), 1.0);
-    //fragc = texture(tex, fs_in.uv);
 }

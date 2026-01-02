@@ -22,18 +22,18 @@ Plane Plane::Create() {
     Plane plane = Plane();
     
     plane.vertices = {
-        0.0f, 0.0f, 0.0f,   0.0f, 1.0f, 0.0f,   0.0f, 0.0f,
-        0.0f, 0.0f, 1.0f,   0.0f, 1.0f, 0.0f,   0.0f, 1.0f,
-        1.0f, 0.0f, 1.0f,   0.0f, 1.0f, 0.0f,   1.0f, 1.0f,
+       -0.5f, 0.0f,-0.5f,   0.0f, 1.0f, 0.0f,   0.0f, 0.0f,
+       -0.5f, 0.0f, 0.5f,   0.0f, 1.0f, 0.0f,   0.0f, 1.0f,
+        0.5f, 0.0f, 0.5f,   0.0f, 1.0f, 0.0f,   1.0f, 1.0f,
         
-        0.0f, 0.0f, 0.0f,   0.0f, 1.0f, 0.0f,   0.0f, 0.0f,
-        1.0f, 0.0f, 1.0f,   0.0f, 1.0f, 0.0f,   1.0f, 1.0f,
-        1.0f, 0.0f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,
+       -0.5f, 0.0f,-0.5f,   0.0f, 1.0f, 0.0f,   0.0f, 0.0f,
+        0.5f, 0.0f, 0.5f,   0.0f, 1.0f, 0.0f,   1.0f, 1.0f,
+        0.5f, 0.0f,-0.5f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,
     };
     
-    plane.position = glm::vec3(-3.0f, 4.0f, -3.0f);
+    plane.position = glm::vec3(0.0f, 4.0f, -25.0f);
     plane.rotation = glm::vec3(90.0f, 0.0f, 0.0f);
-    plane.scale = glm::vec3(9.0f, 6.0f, 6.0f);
+    plane.scale = glm::vec3(9.0f * 10.0f, 6.0f * 10.0f, 6.0f * 10.0f);
     
     plane.color = glm::vec3(1.0f);
     
